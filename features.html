@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Detailed App Features — Wealth-Meter</title>
   <meta name="description" content="Complete Feature Documentation for Wealth-Meter. 100% Private, Offline-First Multi-Asset Portfolio Tracker, Net Worth Ledger, and FIRE Planner." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -70,15 +71,14 @@
       text-decoration: none;
       color: var(--text-main);
     }
-    .brand-icon {
+    .brand-logo {
       width: 40px;
       height: 40px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--teal-primary), var(--cyan-accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 16px rgba(13, 148, 136, 0.4);
+      border-radius: 11px;
+      object-fit: contain;
+      box-shadow: 0 4px 14px rgba(13, 148, 136, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #0B1120;
     }
     .brand-name {
       font-size: 1.35rem;
@@ -432,6 +432,25 @@
       color: var(--text-muted);
       font-size: 0.9rem;
     }
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .footer-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      object-fit: contain;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .footer-brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.3px;
+    }
     .footer-links {
       display: flex;
       justify-content: center;
@@ -440,10 +459,120 @@
       flex-wrap: wrap;
     }
 
+    .hero-logo-img {
+      width: 92px;
+      height: 92px;
+      border-radius: 22px;
+      object-fit: contain;
+      box-shadow: 0 12px 32px rgba(13, 148, 136, 0.45);
+      border: 2px solid rgba(45, 212, 191, 0.35);
+      margin-bottom: 20px;
+      background: #0B1120;
+    }
+
+    /* Device Showcase / Screenshots */
+    .split-feature {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 36px;
+      align-items: center;
+      margin-top: 24px;
+    }
+    .split-feature.reverse {
+      grid-template-columns: 340px 1fr;
+    }
+    .device-mockup {
+      width: 100%;
+      max-width: 330px;
+      margin: 0 auto;
+      background: #050811;
+      border-radius: 36px;
+      padding: 10px;
+      border: 2.5px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 25px rgba(13, 148, 136, 0.22);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .device-mockup:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.75), 0 0 36px rgba(13, 148, 136, 0.38);
+    }
+    .device-mockup img {
+      width: 100%;
+      height: auto;
+      border-radius: 28px;
+      display: block;
+    }
+    .device-caption {
+      font-size: 0.8rem;
+      color: var(--teal-light);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    /* Visual Showcase Gallery */
+    .showcase-section {
+      margin-bottom: 44px;
+    }
+    .showcase-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .showcase-header h2 {
+      font-size: 1.65rem;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+    .showcase-header p {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .showcase-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px;
+    }
+    .showcase-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      padding: 24px;
+      text-align: center;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .showcase-card:hover {
+      border-color: rgba(45, 212, 191, 0.35);
+      transform: translateY(-2px);
+    }
+    .showcase-card h3 {
+      font-size: 1.15rem;
+      margin: 16px 0 6px;
+      color: #FFFFFF;
+    }
+    .showcase-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .split-feature, .split-feature.reverse {
+        grid-template-columns: 1fr;
+      }
+      .device-mockup {
+        max-width: 320px;
+        margin-top: 20px;
+      }
+    }
     @media (max-width: 640px) {
       .hero { padding: 32px 20px; }
       .hero h1 { font-size: 2rem; }
       .section-card { padding: 24px 20px; }
+      .showcase-gallery { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -453,12 +582,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="features.html" class="brand">
-        <div class="brand-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-            <polyline points="17 6 23 6 23 12"></polyline>
-          </svg>
-        </div>
+        <img src="images/logo.png" alt="Wealth-Meter Logo" class="brand-logo" />
         <span class="brand-name">Wealth-Meter</span>
       </a>
       <div class="nav-links">
@@ -474,6 +598,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
+      <img src="images/logo.png" alt="Wealth-Meter Official Logo" class="hero-logo-img" />
       <div class="badge">
         <span>✨ Complete Feature Specification</span>
       </div>
@@ -524,6 +649,37 @@
         <a href="#sec-14" class="toc-pill">14. PDF &amp; CSV Reports</a>
         <a href="#sec-15" class="toc-pill">15. Multi-Currency &amp; Languages</a>
         <a href="#sec-16" class="toc-pill">16. Membership Tiers</a>
+      </div>
+    </div>
+
+    <!-- Visual App Showcase Tour -->
+    <div class="showcase-section">
+      <div class="showcase-header">
+        <h2>App Interface &amp; Visual Tour</h2>
+        <p>Explore actual in-app screenshots showcasing Wealth-Meter's dark-theme UI, stealth privacy controls, and analytics.</p>
+      </div>
+      <div class="showcase-gallery">
+        <div class="showcase-card">
+          <div class="device-mockup">
+            <img src="images/screenshot-home.png" alt="Wealth-Meter Net Worth Trajectory & Stealth Mask" loading="lazy" />
+          </div>
+          <h3>Overview &amp; Stealth Mask</h3>
+          <p>Compound net worth trajectory, 1-tap stealth mask (••••••), and multi-family profile switcher.</p>
+        </div>
+        <div class="showcase-card">
+          <div class="device-mockup">
+            <img src="images/screenshot-allocation-health.png" alt="Wealth-Meter Asset Allocation & Health Index" loading="lazy" />
+          </div>
+          <h3>Allocation &amp; 88/100 Health</h3>
+          <p>Multi-class asset allocation donut, quantitative risk audit, and Time Freedom runway estimator.</p>
+        </div>
+        <div class="showcase-card">
+          <div class="device-mockup">
+            <img src="images/screenshot-holdings.png" alt="Wealth-Meter Itemized Multi-Asset Holdings" loading="lazy" />
+          </div>
+          <h3>Live Holdings Ledger</h3>
+          <p>Automated market pricing for Equities, AMFI Mutual Funds, Fixed Deposits, and SGB 2030 gold bonds.</p>
+        </div>
       </div>
     </div>
 
@@ -643,13 +799,22 @@
         <div class="section-num">3</div>
         <h2>Live Market Pricing &amp; Exchange Rates</h2>
       </div>
-      <ul>
-        <li><strong>One-Tap Market Refresh:</strong> Parallel asynchronous price fetching across all holdings without requiring personal API keys.</li>
-        <li><strong>Global Stock &amp; ETF Coverage:</strong> Supports Indian equities (NSE/BSE e.g., <code>RELIANCE.NS</code>, <code>TCS.NS</code>) and international markets (<code>AAPL</code>, <code>MSFT</code>, <code>NVDA</code>).</li>
-        <li><strong>Indian Mutual Funds:</strong> Daily NAV integration via official AMFI scheme codes.</li>
-        <li><strong>Gold &amp; Crypto Benchmarks:</strong> Real-time spot lookup for gold ETFs and major cryptocurrency pairs.</li>
-        <li><strong>Live FX Matrix:</strong> Supports 166 global fiat currencies with automatic offline rate caching.</li>
-      </ul>
+      <div class="split-feature">
+        <div>
+          <p>Wealth-Meter queries public market endpoints directly without routing your portfolio through any middleman servers or third-party cloud aggregators:</p>
+          <ul>
+            <li><strong>One-Tap Market Refresh:</strong> Parallel asynchronous price fetching across all holdings without requiring personal API keys.</li>
+            <li><strong>Global Stock &amp; ETF Coverage:</strong> Supports Indian equities (NSE/BSE e.g., <code>RELIANCE.NS</code>, <code>TCS.NS</code>) and international markets (<code>AAPL</code>, <code>MSFT</code>, <code>NVDA</code>).</li>
+            <li><strong>Indian Mutual Funds:</strong> Daily NAV integration via official AMFI scheme codes.</li>
+            <li><strong>Gold &amp; Crypto Benchmarks:</strong> Real-time spot lookup for gold ETFs and major cryptocurrency pairs.</li>
+            <li><strong>Live FX Matrix:</strong> Supports 166 global fiat currencies with automatic offline rate caching.</li>
+          </ul>
+        </div>
+        <div class="device-mockup">
+          <img src="images/screenshot-holdings.png" alt="Wealth-Meter Live Multi-Asset Holdings Ledger" loading="lazy" />
+          <div class="device-caption">Live Multi-Asset Holdings Ledger</div>
+        </div>
+      </div>
     </section>
 
     <!-- 4. Multi-Profile & Family Wealth Management -->
@@ -680,15 +845,23 @@
         <div class="section-num">5</div>
         <h2>Liabilities &amp; Debt Repayment Accelerator</h2>
       </div>
-      <p>Track Home Loans, Car Loans, Education Loans, Personal Loans, Gold Loans, and Credit Cards alongside your assets:</p>
-      <div class="formula-box">
-        True Net Worth = Total Portfolio Assets &minus; Total Outstanding Liabilities
+      <div class="split-feature">
+        <div>
+          <p>Track Home Loans, Car Loans, Education Loans, Personal Loans, Gold Loans, and Credit Cards alongside your assets:</p>
+          <div class="formula-box">
+            True Net Worth = Total Portfolio Assets &minus; Total Outstanding Liabilities
+          </div>
+          <ul>
+            <li><strong>Debt Avalanche Strategy:</strong> Prioritizes debts with the highest interest APR first to mathematically minimize total interest paid.</li>
+            <li><strong>Debt Snowball Strategy:</strong> Prioritizes smallest remaining balances first for rapid psychological wins.</li>
+            <li><strong>Extra Prepayment Projector:</strong> Simulate adding extra monthly principal payments to see exact months shaved off your loan tenure and total interest saved.</li>
+          </ul>
+        </div>
+        <div class="device-mockup">
+          <img src="images/screenshot-debt-milestones.png" alt="Wealth-Meter Debt Payoff Accelerator & Milestones" loading="lazy" />
+          <div class="device-caption">Debt Payoff &amp; Milestones</div>
+        </div>
       </div>
-      <ul>
-        <li><strong>Debt Avalanche Strategy:</strong> Prioritizes debts with the highest interest APR first to mathematically minimize total interest paid.</li>
-        <li><strong>Debt Snowball Strategy:</strong> Prioritizes smallest remaining balances first for rapid psychological wins.</li>
-        <li><strong>Extra Prepayment Projector:</strong> Simulate adding extra monthly principal payments to see exact months shaved off your loan tenure and total interest saved.</li>
-      </ul>
     </section>
 
     <!-- 6. FIRE & Time Freedom Engine -->
@@ -727,14 +900,22 @@
         <div class="section-num">7</div>
         <h2>Portfolio Health &amp; Risk Score (0–100)</h2>
       </div>
-      <p>An algorithmic 0–100 diagnostic engine grading your portfolio across 5 foundational pillars:</p>
-      <ol>
-        <li><strong>Concentration Risk (Herfindahl-Hirschman Index):</strong> Flags single holdings exceeding 25% of total net worth.</li>
-        <li><strong>Asset Class Diversification:</strong> Rewards balanced spread across equities, debt, gold, real estate, and liquid cash.</li>
-        <li><strong>Emergency Liquid Buffer:</strong> Verifies whether liquid reserves cover 3–6 months of living expenses.</li>
-        <li><strong>High-Risk Volatility Exposure:</strong> Monitors overexposure to high-beta assets.</li>
-        <li><strong>Fixed Income Anchor:</strong> Ensures a defensive debt/FD cushion is present to weather market drawdowns.</li>
-      </ol>
+      <div class="split-feature reverse">
+        <div class="device-mockup">
+          <img src="images/screenshot-allocation-health.png" alt="Wealth-Meter Portfolio Health Index & Runway" loading="lazy" />
+          <div class="device-caption">Health Index &amp; Runway</div>
+        </div>
+        <div>
+          <p>An algorithmic 0–100 diagnostic engine grading your portfolio across 5 foundational pillars:</p>
+          <ol>
+            <li><strong>Concentration Risk (Herfindahl-Hirschman Index):</strong> Flags single holdings exceeding 25% of total net worth.</li>
+            <li><strong>Asset Class Diversification:</strong> Rewards balanced spread across equities, debt, gold, real estate, and liquid cash.</li>
+            <li><strong>Emergency Liquid Buffer:</strong> Verifies whether liquid reserves cover 3–6 months of living expenses.</li>
+            <li><strong>High-Risk Volatility Exposure:</strong> Monitors overexposure to high-beta assets.</li>
+            <li><strong>Fixed Income Anchor:</strong> Ensures a defensive debt/FD cushion is present to weather market drawdowns.</li>
+          </ol>
+        </div>
+      </div>
     </section>
 
     <!-- 8. Target Allocation & Smart Rebalancing -->
@@ -782,38 +963,44 @@
         <div class="section-num">11</div>
         <h2>8-in-1 Financial Calculators Suite</h2>
       </div>
-      <div class="feature-grid">
-        <div class="feature-item">
-          <h4>📈 1. SIP Calculator</h4>
-          <p>Projects future wealth accumulation from monthly systematic investments with invested vs. gain breakdown.</p>
+      <div class="split-feature">
+        <div class="feature-grid" style="margin-top: 0;">
+          <div class="feature-item">
+            <h4>📈 1. SIP Calculator</h4>
+            <p>Projects future wealth accumulation from monthly systematic investments with invested vs. gain breakdown.</p>
+          </div>
+          <div class="feature-item">
+            <h4>🚀 2. Step-Up SIP Calculator</h4>
+            <p>Models annual contribution step-ups (e.g., 10% yearly hike) to demonstrate exponential compounding.</p>
+          </div>
+          <div class="feature-item">
+            <h4>💰 3. Lumpsum Compound</h4>
+            <p>Supports Monthly, Quarterly, Semi-Annual, and Annual compounding frequencies.</p>
+          </div>
+          <div class="feature-item">
+            <h4>🏦 4. Fixed Deposit (FD)</h4>
+            <p>Computes exact maturity value and interest earned across custom tenures.</p>
+          </div>
+          <div class="feature-item">
+            <h4>📅 5. Recurring Deposit (RD)</h4>
+            <p>Calculates maturity corpus for monthly bank recurring deposits.</p>
+          </div>
+          <div class="feature-item">
+            <h4>🏠 6. Loan EMI &amp; Amortization</h4>
+            <p>Determines monthly EMI, total interest payable, and principal-to-interest ratio.</p>
+          </div>
+          <div class="feature-item">
+            <h4>📉 7. Inflation Depreciator</h4>
+            <p>Visualizes future purchasing power erosion over 5, 10, 20, or 30 years.</p>
+          </div>
+          <div class="feature-item">
+            <h4>⏱️ 8. Rule of 72 Estimator</h4>
+            <p>Instantly calculates the exact years required to double your money at any given return rate.</p>
+          </div>
         </div>
-        <div class="feature-item">
-          <h4>🚀 2. Step-Up SIP Calculator</h4>
-          <p>Models annual contribution step-ups (e.g., 10% yearly hike) to demonstrate exponential compounding.</p>
-        </div>
-        <div class="feature-item">
-          <h4>💰 3. Lumpsum Compound</h4>
-          <p>Supports Monthly, Quarterly, Semi-Annual, and Annual compounding frequencies.</p>
-        </div>
-        <div class="feature-item">
-          <h4>🏦 4. Fixed Deposit (FD)</h4>
-          <p>Computes exact maturity value and interest earned across custom tenures.</p>
-        </div>
-        <div class="feature-item">
-          <h4>📅 5. Recurring Deposit (RD)</h4>
-          <p>Calculates maturity corpus for monthly bank recurring deposits.</p>
-        </div>
-        <div class="feature-item">
-          <h4>🏠 6. Loan EMI &amp; Amortization</h4>
-          <p>Determines monthly EMI, total interest payable, and principal-to-interest ratio.</p>
-        </div>
-        <div class="feature-item">
-          <h4>📉 7. Inflation Depreciator</h4>
-          <p>Visualizes future purchasing power erosion over 5, 10, 20, or 30 years.</p>
-        </div>
-        <div class="feature-item">
-          <h4>⏱️ 8. Rule of 72 Estimator</h4>
-          <p>Instantly calculates the exact years required to double your money at any given return rate.</p>
+        <div class="device-mockup">
+          <img src="images/screenshot-calculators.png" alt="Wealth-Meter Step-Up SIP Multiplier Calculator" loading="lazy" />
+          <div class="device-caption">Step-Up SIP Multiplier</div>
         </div>
       </div>
     </section>
@@ -898,6 +1085,10 @@
 
   <!-- Footer -->
   <footer>
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Wealth-Meter Logo" class="footer-logo" />
+      <span class="footer-brand-title">Wealth-Meter</span>
+    </div>
     <div class="footer-links">
       <a href="features.html">Detailed App Features</a>
       <a href="privacy-policy.html">Privacy Policy</a>
