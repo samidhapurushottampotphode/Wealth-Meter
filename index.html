@@ -56,7 +56,7 @@
       padding: 16px 24px;
     }
     .nav-container {
-      max-width: 1180px;
+      max-width: 1120px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -137,9 +137,29 @@
       height: 5px;
       background: linear-gradient(90deg, var(--teal-primary), var(--teal-light), var(--cyan-accent));
     }
+    .hero-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .hero-logo-img {
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      object-fit: contain;
+      box-shadow: 0 12px 32px rgba(13, 148, 136, 0.45);
+      border: 2px solid rgba(45, 212, 191, 0.35);
+      background: #0B1120;
+      display: block;
+      margin: 0 auto 16px auto;
+    }
     .badge {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       background: rgba(13, 148, 136, 0.18);
       border: 1px solid rgba(45, 212, 191, 0.35);
@@ -150,7 +170,7 @@
       font-weight: 700;
       letter-spacing: 0.8px;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin: 0 auto 18px auto;
     }
     .hero h1 {
       font-size: 2.8rem;
@@ -160,12 +180,14 @@
       background: linear-gradient(135deg, #FFFFFF 55%, #94A3B8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-align: center;
     }
     .hero p {
       color: var(--text-secondary);
       font-size: 1.12rem;
       max-width: 780px;
-      margin: 0 auto 32px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     /* KPI Strip */
@@ -459,17 +481,6 @@
       flex-wrap: wrap;
     }
 
-    .hero-logo-img {
-      width: 92px;
-      height: 92px;
-      border-radius: 22px;
-      object-fit: contain;
-      box-shadow: 0 12px 32px rgba(13, 148, 136, 0.45);
-      border: 2px solid rgba(45, 212, 191, 0.35);
-      margin-bottom: 20px;
-      background: #0B1120;
-    }
-
     /* Device Showcase / Screenshots */
     .split-feature {
       display: grid;
@@ -598,12 +609,14 @@
 
     <!-- Hero Section -->
     <section class="hero">
-      <img src="images/logo.png" alt="Wealth-Meter Official Logo" class="hero-logo-img" />
-      <div class="badge">
-        <span>✨ Complete Feature Specification</span>
+      <div class="hero-header">
+        <img src="images/logo.png" alt="Wealth-Meter Official Logo" class="hero-logo-img" />
+        <div class="badge">
+          <span>✨ Complete Feature Specification</span>
+        </div>
+        <h1>Wealth-Meter Platform Capabilities</h1>
+        <p>A privacy-first, offline-first, multi-asset portfolio tracker, family office balance sheet, and financial independence (FIRE) companion engineered with Material Design 3.</p>
       </div>
-      <h1>Wealth-Meter Platform Capabilities</h1>
-      <p>A privacy-first, offline-first, multi-asset portfolio tracker, family office balance sheet, and financial independence (FIRE) companion engineered with Material Design 3.</p>
 
       <div class="kpi-strip">
         <div class="kpi-card">
